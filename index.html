@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- =============================== SLIDER LINK  =============================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- ============================== SLICK-THEME-MIN-CSS-LINK =============================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+
+  <body>
+   <div class=" relative">
+        <span class="custom-next-arrow absolute inline-block right-0 top-[40%] cursor-pointer"
+        ><img src="./next-arroe.svg" alt="arrow-next"
+      /></span>
+     <div class="max-w-[1140px] mx-auto px-3  mt-12">
+
+    <div class="relative">
+      <div class="slider_custom relative">
+        <div>
+          <div
+            class="flex flex-col md:flex-row w-full justify-around gap-10 md:gap-0"
+          >
+            <div class="w-full flex justify-center">
+              <div class="md:w-60 flex justify-center">
+                <img
+                  class="w-1/2 lg:w-60 md:h-80 h-[200px]"
+                  src="./img1.png"
+                  alt="img-1"
+                />
+              </div>
+            </div>
+            <div class="w-full flex justify-center">
+              <div class="flex justify-center md:w-60 h-[200px]">
+                <img class="w-1/2 md:h-80" src="./img2.png" alt="img-1" />
+              </div>
+            </div>
+            <div class="w-full flex justify-center">
+              <div class="md:w-60 justify-center flex">
+                <img
+                  class="w-1/2 lg:w-60 md:h-80 h-[200px]"
+                  src="./img3.png"
+                  alt="img-1"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="flex flex-col md:flex-row w-full justify-around gap-10 md:gap-0"
+          >
+            <div class="w-full flex justify-center">
+              <div class="md:w-60 flex justify-center items-center">
+                <!-- <img
+                  class="w-1/2 lg:w-60 md:h-80 h-[200px]"
+                  src="./img1.png"
+                  alt="img-1"
+                /> -->
+                img2
+              </div>
+            </div>
+            <div class="w-full flex justify-center">
+              <div class="flex justify-center md:w-60 items-center h-[200px]">
+                <!-- <img class="w-1/2 md:h-80" src="./img2.png" alt="img-1" /> -->
+                img2
+              </div>
+            </div>
+            <div class="w-full flex justify-center">
+              <div class="md:w-60 justify-center items-center flex">
+                img2
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="flex flex-col md:flex-row w-full justify-around gap-10 md:gap-0"
+          >
+            <div class="w-full flex justify-center">
+              <div class="md:w-60 flex items-center justify-center">
+                <!-- <img
+                  class="w-1/2 lg:w-60 md:h-80 h-[200px]"
+                  src="./img1.png"
+                  alt="img-1"
+                /> -->
+                img3
+
+              </div>
+            </div>
+            <div class="w-full flex justify-center">
+              <div class="flex justify-center items-center md:w-60 h-[200px]">
+                <!-- <img class="w-1/2 md:h-80" src="./img2.png" alt="img-1" /> -->
+                img3
+              </div>
+            </div>
+            <div class="w-full flex justify-center">
+              <div class="md:w-60 justify-center items-center flex">
+                <!-- <img
+                  class="w-1/2 lg:w-60 md:h-80 h-[200px]"
+                  src="./img3.png"
+                  alt="img-1"
+                /> -->
+                img3
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div>
+          <div
+            class="flex flex-col md:flex-row w-full justify-around gap-10 md:gap-0"
+          >
+            <div class="w-full flex justify-center">
+              <div class="flex justify-center md:w-60 h-[200px]">
+                <img class="w-1/2 md:h-80" src="./img2.png" alt="img-1" />
+              </div>
+            </div>
+            <div class="w-full flex justify-center">
+              <div class="md:w-60 flex justify-center">
+                <img
+                  class="w-1/2 lg:w-60 md:h-80 h-[200px]"
+                  src="./img1.png"
+                  alt="img-1"
+                />
+              </div>
+            </div>
+
+            <div class="w-full flex justify-center">
+              <div class="md:w-60 justify-center flex">
+                <img
+                  class="w-1/2 lg:w-60 md:h-80 h-[200px]"
+                  src="./img3.png"
+                  alt="img-1"
+                />
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+   </div>
+    <!-- <button class="custom-prev-arrow">Previous</button> -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- ==============================SLICK-MIN-JS-LINK ============================== -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/main.js"></script>
+    <script>
+      $(".slider_custom").slick({
+        dots: false,
+        infinite: true, // Make the slider infinite
+        speed: 1000,
+        cssEase:"ease-in-out",
+        autoplay: false,
+        slidesToShow: 1,
+        fade: true,
+        slidesToScroll: 1,
+        prevArrow: $(".custom-prev-arrow"), // Use the custom prev arrow
+        nextArrow: $(".custom-next-arrow"),
+        responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    </script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  </body>
+</html>
