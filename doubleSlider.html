@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <!-- Include Tailwind CSS via CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Include slick carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="bg-gray-100">
+    <div class="container mx-auto mt-4">
+      <div class="bg-blue-500 p-4 rounded-lg">
+        <h2 class="text-white text-lg font-medium mb-2">Company Gallery</h2>
+        <div class="flex flex-col md:flex-row md:items-center">
+          <div class="md:w-2/3 p-2">
+            <div class="slick-slider">
+              <div>
+                <img
+                  class="w-full rounded-lg gallery-slider-main-img"
+                  src="../assets/images/webp/company-gallery-main-img.webp"
+                  alt="slider_main_img"
+                />
+              </div>
+              <div>
+                <img
+                  class="w-full rounded-lg gallery-slider-main-img"
+                  src="../assets/images/webp/gallary-second-img.webp"
+                  alt="slider_img"
+                />
+              </div>
+              <div>
+                <img
+                  class="w-full rounded-lg gallery-slider-main-img"
+                  src="../assets/images/webp/gallary-third-img.webp"
+                  alt="slider_img"
+                />
+              </div>
+              <div>
+                <img
+                  class="w-full rounded-lg gallery-slider-main-img"
+                  src="../assets/images/webp/gallary-fourth-img.webp"
+                  alt="slider_img"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/3 mt-4 md:mt-0 px-2">
+            <div class="flex justify-between space-x-2">
+              <div>
+                <span
+                  class="block overflow-hidden rounded-lg border border-blue-500 cursor-pointer"
+                  onclick="handleDotClick(0)"
+                >
+                  <img
+                    class="w-full cursor-pointer"
+                    src="../assets/images/webp/company-gallery-main-img.webp"
+                    alt="slider_img"
+                  />
+                </span>
+              </div>
+              <div>
+                <span
+                  class="block overflow-hidden rounded-lg border border-blue-500 cursor-pointer"
+                  onclick="handleDotClick(1)"
+                >
+                  <img
+                    class="w-full cursor-pointer"
+                    src="../assets/images/webp/gallary-second-img.webp"
+                    alt="slider_img"
+                  />
+                </span>
+              </div>
+              <div>
+                <span
+                  class="block overflow-hidden rounded-lg border border-blue-500 cursor-pointer"
+                  onclick="handleDotClick(2)"
+                >
+                  <img
+                    class="w-full cursor-pointer"
+                    src="../assets/images/webp/gallary-third-img.webp"
+                    alt="slider_img"
+                  />
+                </span>
+              </div>
+              <div>
+                <span
+                  class="block overflow-hidden rounded-lg border border-blue-500 cursor-pointer"
+                  onclick="handleDotClick(3)"
+                >
+                  <img
+                    class="w-full cursor-pointer"
+                    src="../assets/images/webp/gallary-fourth-img.webp"
+                    alt="slider_img"
+                  />
+                </span>
+              </div>
+            </div>
+            <div class="flex justify-center space-x-1 mt-3">
+              <span
+                class="block w-4 h-4 rounded-full bg-blue-500 cursor-pointer dotz dotzActive"
+                onclick="handleDotClick(0)"
+              ></span>
+              <span
+                class="block w-4 h-4 rounded-full bg-blue-500 cursor-pointer dotz"
+                onclick="handleDotClick(1)"
+              ></span>
+              <span
+                class="block w-4 h-4 rounded-full bg-blue-500 cursor-pointer dotz"
+                onclick="handleDotClick(2)"
+              ></span>
+              <span
+                class="block w-4 h-4 rounded-full bg-blue-500 cursor-pointer dotz"
+                onclick="handleDotClick(3)"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include jQuery and Slick Carousel JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-5b8BCR5lRq4/O5iD/Oq8OrKemvFfhDPQ2sE7MwwuWvqyJf6J6OtFhYfBk68z7Wz3nyt9JSOOS6GQa/jg9s2WqkA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      // Initialize the Slick Carousel
+      $(document).ready(function () {
+        $(".slick-slider").slick();
+      });
+
+      // Your custom JavaScript code for handling the slider goes here
+      function handleDotClick(index) {
+        $(".slick-slider").slick("slickGoTo", index);
+      }
+    </script>
+  </body>
+</html>
